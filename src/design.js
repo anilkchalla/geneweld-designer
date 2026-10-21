@@ -45,18 +45,18 @@ export function design({raw,guide,strand='+',position=0,armLength=48,siteIndex=0
   if(cut+padLength>exonEnd) throw Error('Codon padding extends beyond the annotated exon; splice-aware design is not supported.');
   const padding=dna.slice(cut,cut+padLength);
   const oligos={
-    '5HA-A':'GCGG'+leftSpacer+five+padding,
-    '5HA-B':'ATCC'+rc(padding+five+leftSpacer),
+    '5HA-A':'GAGC'+leftSpacer+five+padding,
+    '5HA-B':'CCCG'+rc(leftSpacer+five+padding),
     '3HA-A':'AAG'+three+rightSpacer,
     '3HA-B':'CGG'+rc(three+rightSpacer)
   };
   const warnings=[];
   if(cut-exonStart<armLength||exonEnd-cut<armLength) warnings.push('At least one homology arm overlaps flanking intronic sequence.');
   if(Math.min(cut-exonStart,exonEnd-cut)<=6) warnings.push('Cut is within 6 bases of an exon boundary; possible splice effects need evaluation.');
-  const motifs=['ACCTGC','GAAGAGC'];
+  const motifs=['ACCTGC','GCTCTTC'];
   for(const [name,seq] of Object.entries(oligos)) for(const m of motifs) if(seq.includes(m)||seq.includes(rc(m))) warnings.push(`${name} contains a cloning-efficiency warning motif (${m} or reverse complement).`);
   const checks={
-    upstreamDuplex:oligos['5HA-B']==='ATCC'+rc(padding+five+leftSpacer),
+    upstreamDuplex:oligos['5HA-B']==='CCCG'+rc(leftSpacer+five+padding),
     downstreamDuplex:oligos['3HA-B']==='CGG'+rc(three+rightSpacer),
     homology:five===dna.slice(cut-armLength,cut)&&three===dna.slice(cut,cut+armLength),
     codingBoundary:(cut+padding.length-exonStart+position)%3===0

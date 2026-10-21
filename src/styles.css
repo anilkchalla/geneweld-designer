@@ -13,3 +13,11 @@
 @media(max-width:480px){.junction-card{padding:10px}.junction-diagram{gap:5px}.junction-block{font-size:12px}}
 /* Readable on the original site's light panels. */
 .junction-card{border-color:#d7dfe4}.junction-genomic{color:#526383}.junction-insert{color:#286658}.junction-boundary{color:#886000}
+
+/* Version 1.2 pPRISM assembled products and translation. */
+.dna-genomic{color:#304b70;background:#eef3fb}.dna-arm{color:#075e4e;background:#d7f2e8}.dna-padding{color:#824600;background:#fff0c9}.dna-linker{color:#614a00;background:#f6edb8}.dna-p2a{color:#753577;background:#f5e1f4}.dna-rfp{color:#a32137;background:#fce3e8}.dna-noncoding{color:#4f5c69;background:#eef0f3}.dna-backbone{color:#56616c}.dna-tail{color:#165a91;background:#dcecff}.dna-spacer{color:#805000;background:#fff0ca}
+.product-notice{padding:12px;border-radius:8px;font-size:12px;line-height:1.6;background:#fff5db;color:#795000}.product-notice.good{background:#e8f5ec;color:#175e3f}
+.product-legend{display:flex;flex-wrap:wrap;gap:10px;font-size:11px;margin:18px 0}.product-schematic{padding:14px;background:#f8fafb;border:1px solid #dce4e7;border-radius:8px;font-size:12px;line-height:2.4}.product-schematic span{padding:3px;border-radius:3px}
+#junctions h3{font-size:14px;margin:24px 0 12px}#junctions details{margin:16px 0}#junctions summary{font-size:12px;cursor:pointer;font-weight:600;line-height:1.6}
+.product-dna{font:12px/2 ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere;word-break:break-all;padding:12px;border:1px solid #dce4e7;border-radius:8px;margin:10px 0;max-height:330px;overflow:auto}.product-dna span{padding:2px 0}
+.codon-track{display:flex;flex-wrap:wrap;gap:5px;border:1px solid #dce4e7;padding:10px;border-radius:8px}.codon{display:flex;flex-direction:column;align-items:center;font:12px/1.8 ui-monospace,monospace;border:1px solid #e2e7eb;border-radius:4px;padding:3px}.codon b{color:#243d50}.codon small{font-size:9px;color:#687e8c}.stop-codon{border:2px solid #bc293d}.stop-codon b{color:#bc293d}.product-table{font-size:12px;width:100%;border-collapse:collapse}.product-table th,.product-table td{text-align:left;padding:8px;border-bottom:1px solid #dce4e7}.protein{letter-spacing:1px}.hint{color:#647583}

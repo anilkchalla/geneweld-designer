@@ -1,3 +1,7 @@
+# Version 1.1 update
+
+See [UPLOAD_INSTRUCTIONS.md](UPLOAD_INSTRUCTIONS.md) for the focused update and upload steps. The junction preview is conditional and requires supplied retained insert ends for insert-side bases.
+
 # GeneWeld Designer — Version 1.0 beta
 
 A lightweight, static, browser-only designer for short homology arms and the four cloning oligonucleotides used with **pGTag/GeneWeld**. Works on GitHub Pages; no backend, build step or external APIs.
